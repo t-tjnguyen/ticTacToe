@@ -22,6 +22,12 @@ public class Board
 							}
 						System.out.println();
 					}
+				
 			}
+//		static ArrayList <Board> board = new ArrayList <Board>();
+//		public static void fillBoard()
+//		{
+//			board.add(new Board ());
+//		}
 	}
 // i successfully import/committed from home
