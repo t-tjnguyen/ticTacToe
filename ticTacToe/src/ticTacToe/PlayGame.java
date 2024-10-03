@@ -27,17 +27,7 @@ public class PlayGame
 						System.out.println();
 					}
 				System.out.println("Where would you like to put your first piece?");
-				
-//				int one = Integer.parseInt(board[0][1]);
-//				int two = Integer.parseInt(board[0][5]);
-//				int three = Integer.parseInt(board[0][9]);
-//				int four = Integer.parseInt(board[2][2]);
-//				int five = Integer.parseInt(board[2][5]);
-//				int six = Integer.parseInt(board[2][9]);
-//				int seven = Integer.parseInt(board[4][1]);
-//				int eight = Integer.parseInt(board[4][5]);
-//				int nine = Integer.parseInt(board[4][9]);
-				
+
 				int piecePlacement = scanner.nextInt();
 				if (piecePlacement == 1)
 					{
@@ -587,454 +577,522 @@ public class PlayGame
 								System.out.println();
 							}
 					}
-				if ((board[0][1] == "x" && board[2][1] == "x" && board[4][1] == "x") || (board[0][5] == "x" && board[2][5] == "x" && board[4][5] == "x") || (board[0][1] == "x" && board[0][5] == "x" && board[0][9] == "x"))
+				if ((board[0][1] == "x" && board[2][1] == "x" && board[4][1] == "x")
+						|| (board[0][5] == "x" && board[2][5] == "x" && board[4][5] == "x")
+						|| (board[0][9] == "x" && board[2][9] == "x" && board[4][9] == "x")
+						|| (board[0][1] == "x" && board[0][5] == "x" && board[0][9] == "x")
+						|| (board[2][1] == "x" && board[2][5] == "x" && board[2][9] == "x")
+						|| (board[4][1] == "x" && board[4][5] == "x" && board[4][9] == "x")
+						|| (board[0][1] == "x" && board[2][5] == "x" && board[4][9] == "x")
+						|| (board[0][9] == "x" && board[2][5] == "x" && board[4][1] == "x"))
 					{
 						System.out.println("You won!");
 					}
 				else
 					{
-						
+
 						System.out.println("Where would you like to put your sixth piece?");
-					
-				int piecePlacement6 = scanner.nextInt();
-				if (piecePlacement6 == 1)
-					{
-						board[0][1] = "o";
-						for (int row = 0; row < board.length; row++)
+
+						int piecePlacement6 = scanner.nextInt();
+						if (piecePlacement6 == 1)
 							{
-								for (int col = 0; col < board[0].length; col++)
+								board[0][1] = "o";
+								for (int row = 0; row < board.length; row++)
 									{
-										System.out.print(board[row][col]);
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
 									}
-								System.out.println();
+							}
+						else if (piecePlacement6 == 2)
+							{
+								board[0][5] = "o";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement6 == 3)
+							{
+								board[0][9] = "o";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement6 == 4)
+							{
+								board[2][1] = "o";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement6 == 5)
+							{
+								board[2][5] = "o";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement6 == 6)
+							{
+								board[2][9] = "o";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement6 == 7)
+							{
+								board[4][1] = "o";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement6 == 8)
+							{
+								board[4][5] = "o";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement6 == 9)
+							{
+								board[4][9] = "o";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
 							}
 					}
-				else if (piecePlacement6 == 2)
+				if ((board[0][1] == "x" && board[2][1] == "x" && board[4][1] == "x")
+						|| (board[0][5] == "x" && board[2][5] == "x" && board[4][5] == "x")
+						|| (board[0][9] == "x" && board[2][9] == "x" && board[4][9] == "x")
+						|| (board[0][1] == "x" && board[0][5] == "x" && board[0][9] == "x")
+						|| (board[2][1] == "x" && board[2][5] == "x" && board[2][9] == "x")
+						|| (board[4][1] == "x" && board[4][5] == "x" && board[4][9] == "x")
+						|| (board[0][1] == "x" && board[2][5] == "x" && board[4][9] == "x")
+						|| (board[0][9] == "x" && board[2][5] == "x" && board[4][1] == "x"))
 					{
-						board[0][5] = "o";
-						for (int row = 0; row < board.length; row++)
+						System.out.println("You won!");
+					}
+				else
+					{
+
+						System.out.println("Where would you like to put your seventh piece?");
+						int piecePlacement7 = scanner.nextInt();
+						if (piecePlacement7 == 1)
 							{
-								for (int col = 0; col < board[0].length; col++)
+								board[0][1] = "x";
+								for (int row = 0; row < board.length; row++)
 									{
-										System.out.print(board[row][col]);
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
 									}
-								System.out.println();
+							}
+						else if (piecePlacement7 == 2)
+							{
+								board[0][5] = "x";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement7 == 3)
+							{
+								board[0][9] = "x";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement7 == 4)
+							{
+								board[2][1] = "x";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement7 == 5)
+							{
+								board[2][5] = "x";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement7 == 6)
+							{
+								board[2][9] = "x";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement7 == 7)
+							{
+								board[4][1] = "x";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement7 == 8)
+							{
+								board[4][5] = "x";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement7 == 9)
+							{
+								board[4][9] = "x";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
 							}
 					}
-				else if (piecePlacement6 == 3)
+				if ((board[0][1] == "x" && board[2][1] == "x" && board[4][1] == "x")
+						|| (board[0][5] == "x" && board[2][5] == "x" && board[4][5] == "x")
+						|| (board[0][9] == "x" && board[2][9] == "x" && board[4][9] == "x")
+						|| (board[0][1] == "x" && board[0][5] == "x" && board[0][9] == "x")
+						|| (board[2][1] == "x" && board[2][5] == "x" && board[2][9] == "x")
+						|| (board[4][1] == "x" && board[4][5] == "x" && board[4][9] == "x")
+						|| (board[0][1] == "x" && board[2][5] == "x" && board[4][9] == "x")
+						|| (board[0][9] == "x" && board[2][5] == "x" && board[4][1] == "x"))
 					{
-						board[0][9] = "o";
-						for (int row = 0; row < board.length; row++)
+						System.out.println("You won!");
+					}
+				else
+					{
+
+						System.out.println("Where would you like to put your eighth piece?");
+						int piecePlacement8 = scanner.nextInt();
+						if (piecePlacement8 == 1)
 							{
-								for (int col = 0; col < board[0].length; col++)
+								board[0][1] = "o";
+								for (int row = 0; row < board.length; row++)
 									{
-										System.out.print(board[row][col]);
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
 									}
-								System.out.println();
+							}
+						else if (piecePlacement8 == 2)
+							{
+								board[0][5] = "o";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement8 == 3)
+							{
+								board[0][9] = "o";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+
+						else if (piecePlacement8 == 4)
+							{
+								board[2][1] = "o";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement8 == 5)
+							{
+								board[2][5] = "o";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement8 == 6)
+							{
+								board[2][9] = "o";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement8 == 7)
+							{
+								board[4][1] = "o";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement8 == 8)
+							{
+								board[4][5] = "o";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement8 == 9)
+							{
+								board[4][9] = "o";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
 							}
 					}
-				else if (piecePlacement6 == 4)
+				if ((board[0][1] == "x" && board[2][1] == "x" && board[4][1] == "x")
+						|| (board[0][5] == "x" && board[2][5] == "x" && board[4][5] == "x")
+						|| (board[0][9] == "x" && board[2][9] == "x" && board[4][9] == "x")
+						|| (board[0][1] == "x" && board[0][5] == "x" && board[0][9] == "x")
+						|| (board[2][1] == "x" && board[2][5] == "x" && board[2][9] == "x")
+						|| (board[4][1] == "x" && board[4][5] == "x" && board[4][9] == "x")
+						|| (board[0][1] == "x" && board[2][5] == "x" && board[4][9] == "x")
+						|| (board[0][9] == "x" && board[2][5] == "x" && board[4][1] == "x"))
 					{
-						board[2][1] = "o";
-						for (int row = 0; row < board.length; row++)
+						System.out.println("You won!");
+					}
+				else
+					{
+
+						System.out.println("Where would you like to put your ninth piece?");
+						int piecePlacement9 = scanner.nextInt();
+						if (piecePlacement9 == 1)
 							{
-								for (int col = 0; col < board[0].length; col++)
+								board[0][1] = "x";
+								for (int row = 0; row < board.length; row++)
 									{
-										System.out.print(board[row][col]);
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
 									}
-								System.out.println();
+							}
+						else if (piecePlacement9 == 2)
+							{
+								board[0][5] = "x";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement9 == 3)
+							{
+								board[0][9] = "x";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement9 == 4)
+							{
+								board[2][1] = "x";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement9 == 5)
+							{
+								board[2][5] = "x";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement9 == 6)
+							{
+								board[2][9] = "x";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement9 == 7)
+							{
+								board[4][1] = "x";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement9 == 8)
+							{
+								board[4][5] = "x";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
+							}
+						else if (piecePlacement9 == 9)
+							{
+								board[4][9] = "x";
+								for (int row = 0; row < board.length; row++)
+									{
+										for (int col = 0; col < board[0].length; col++)
+											{
+												System.out.print(board[row][col]);
+											}
+										System.out.println();
+									}
 							}
 					}
-				else if (piecePlacement6 == 5)
+				if ((board[0][1] == "x" && board[2][1] == "x" && board[4][1] == "x")
+						|| (board[0][5] == "x" && board[2][5] == "x" && board[4][5] == "x")
+						|| (board[0][9] == "x" && board[2][9] == "x" && board[4][9] == "x")
+						|| (board[0][1] == "x" && board[0][5] == "x" && board[0][9] == "x")
+						|| (board[2][1] == "x" && board[2][5] == "x" && board[2][9] == "x")
+						|| (board[4][1] == "x" && board[4][5] == "x" && board[4][9] == "x")
+						|| (board[0][1] == "x" && board[2][5] == "x" && board[4][9] == "x")
+						|| (board[0][9] == "x" && board[2][5] == "x" && board[4][1] == "x"))
 					{
-						board[2][5] = "o";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
+						System.out.println("You won!");
 					}
-				else if (piecePlacement6 == 6)
+				else
 					{
-						board[2][9] = "o";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement6 == 7)
-					{
-						board[4][1] = "o";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement6 == 8)
-					{
-						board[4][5] = "o";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement6 == 9)
-					{
-						board[4][9] = "o";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-					}
-				System.out.println("Where would you like to put your seventh piece?");
-				int piecePlacement7 = scanner.nextInt();
-				if (piecePlacement7 == 1)
-					{
-						board[0][1] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement7 == 2)
-					{
-						board[0][5] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement7 == 3)
-					{
-						board[0][9] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement7 == 4)
-					{
-						board[2][1] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement7 == 5)
-					{
-						board[2][5] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement7 == 6)
-					{
-						board[2][9] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement7 == 7)
-					{
-						board[4][1] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement7 == 8)
-					{
-						board[4][5] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement7 == 9)
-					{
-						board[4][9] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				System.out.println("Where would you like to put your eighth piece?");
-				int piecePlacement8 = scanner.nextInt();
-				if (piecePlacement8 == 1)
-					{
-						board[0][1] = "o";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement8 == 2)
-					{
-						board[0][5] = "o";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement8 == 3)
-					{
-						board[0][9] = "o";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement8 == 4)
-					{
-						board[2][1] = "o";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement8 == 5)
-					{
-						board[2][5] = "o";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement8 == 6)
-					{
-						board[2][9] = "o";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement8 == 7)
-					{
-						board[4][1] = "o";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement8 == 8)
-					{
-						board[4][5] = "o";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement8 == 9)
-					{
-						board[4][9] = "o";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				System.out.println("Where would you like to put your ninth piece?");
-				int piecePlacement9 = scanner.nextInt();
-				if (piecePlacement9 == 1)
-					{
-						board[0][1] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement9 == 2)
-					{
-						board[0][5] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement9 == 3)
-					{
-						board[0][9] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement9 == 4)
-					{
-						board[2][1] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement9 == 5)
-					{
-						board[2][5] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement9 == 6)
-					{
-						board[2][9] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement9 == 7)
-					{
-						board[4][1] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement9 == 8)
-					{
-						board[4][5] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement9 == 9)
-					{
-						board[4][9] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
+						System.out.println("It's a tie!");
 					}
 			}
 	}
