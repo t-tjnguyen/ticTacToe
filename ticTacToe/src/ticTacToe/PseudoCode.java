@@ -112,3 +112,15 @@ public class PseudoCode
 		// say "You won!" if there are three x's or o's in a row (horizontal, vertical, or diagonal)
 		// say "It's a tie!" if there aren't three x's or o's in a row
 	}
+
+//   A   B   C
+//1    |   |   
+//  ___|___|___
+//2    |   |   
+//  ___|___|___
+//3    |   |   
+//     |   |   
+
+// display board
+// guess
+// display board

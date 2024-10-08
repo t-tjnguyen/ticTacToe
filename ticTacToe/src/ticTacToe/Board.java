@@ -2,18 +2,18 @@ package ticTacToe;
 
 public class Board
 	{
-		public static void main(String[] args)
-			{
-				String[][] board =
-				// [6][11]	
-					{
-							{ " ", "x", " ", "|", " ", "o", " ", "|", " ", "x", " " },
-							{ "_", "_", "_", "|", "_", "_", "_", "|", "_", "_", "_" },
-							{ " ", "x", " ", "|", " ", "o", " ", "|", " ", "x", " " },
-							{ "_", "_", "_", "|", "_", "_", "_", "|", "_", "_", "_" },
-							{ " ", "x", " ", "|", " ", "o", " ", "|", " ", "x", " " },
-							{ " ", " ", " ", "|", " ", " ", " ", "|", " ", " ", " " } };
+		static String[][] board =
+		// [6][11]
 
+				  { { " ", "1", " ", "|", " ", "2", " ", "|", " ", "3", " " },
+					{ "_", "_", "_", "|", "_", "_", "_", "|", "_", "_", "_" },
+					{ " ", "4", " ", "|", " ", "5", " ", "|", " ", "6", " " },
+					{ "_", "_", "_", "|", "_", "_", "_", "|", "_", "_", "_" },
+					{ " ", "7", " ", "|", " ", "8", " ", "|", " ", "9", " " },
+					{ " ", " ", " ", "|", " ", " ", " ", "|", " ", " ", " " } };
+
+		public static void displayBoard()
+			{
 				for (int row = 0; row < board.length; row++)
 					{
 						for (int col = 0; col < board[0].length; col++)
@@ -22,12 +22,6 @@ public class Board
 							}
 						System.out.println();
 					}
-				
 			}
-//		static ArrayList <Board> board = new ArrayList <Board>();
-//		public static void fillBoard()
-//		{
-//			board.add(new Board ());
-//		}
 	}
 // i successfully import/committed from home

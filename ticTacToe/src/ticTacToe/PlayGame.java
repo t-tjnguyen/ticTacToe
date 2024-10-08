@@ -6,139 +6,14 @@ public class PlayGame
 	{
 		public static void main(String[] args)
 			{
-				Scanner scanner = new Scanner(System.in);
-				System.out.println("Let's play checkers! (Sorry, you'll really be playing by yourself)");
-				String[][] board =
-						// [6][11]
-						{
-								{ " ", "1", " ", "|", " ", "2", " ", "|", " ", "3", " " },
-								{ "_", "_", "_", "|", "_", "_", "_", "|", "_", "_", "_" },
-								{ " ", "4", " ", "|", " ", "5", " ", "|", " ", "6", " " },
-								{ "_", "_", "_", "|", "_", "_", "_", "|", "_", "_", "_" },
-								{ " ", "7", " ", "|", " ", "8", " ", "|", " ", "9", " " },
-								{ " ", " ", " ", "|", " ", " ", " ", "|", " ", " ", " " } };
-
-				for (int row = 0; row < board.length; row++)
-					{
-						for (int col = 0; col < board[0].length; col++)
-							{
-								System.out.print(board[row][col]);
-							}
-						System.out.println();
-					}
-				System.out.println("Where would you like to put your first piece?");
-
-				int piecePlacement = scanner.nextInt();
-				if (piecePlacement == 1)
-					{
-						board[0][1] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement == 2)
-					{
-						board[0][5] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement == 3)
-					{
-						board[0][9] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement == 4)
-					{
-						board[2][1] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement == 5)
-					{
-						board[2][5] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement == 6)
-					{
-						board[2][9] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement == 7)
-					{
-						board[4][1] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement == 8)
-					{
-						board[4][5] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
-				else if (piecePlacement == 9)
-					{
-						board[4][9] = "x";
-						for (int row = 0; row < board.length; row++)
-							{
-								for (int col = 0; col < board[0].length; col++)
-									{
-										System.out.print(board[row][col]);
-									}
-								System.out.println();
-							}
-					}
+				System.out.println("Let's play ticTacToe! (Sorry, you'll really be playing by yourself)");
+				
+				Board.displayBoard();
+				PlayGame.gainInput();
+				PlayGame.replaceNumberx();
+				Board.displayBoard();
 				System.out.println("Where would you like to put your second piece?");
-				int piecePlacement2 = scanner.nextInt();
+				/*int piecePlacement2 = scanner.nextInt();
 				if (piecePlacement2 == 1)
 					{
 						board[0][1] = "o";
@@ -1093,6 +968,97 @@ public class PlayGame
 				else
 					{
 						System.out.println("It's a tie!");
+					} */
+			}
+	
+		public static void replaceNumberx()
+		{
+			Scanner scanner = new Scanner(System.in);
+			int piecePlacement = scanner.nextInt();
+			if (piecePlacement == 1)
+				{
+					Board.board[0][1] = "x";
+				}
+			else if (piecePlacement == 2)
+				{
+					Board.board[0][5] = "x";
+				}
+			else if (piecePlacement == 3)
+				{
+					Board.board[0][9] = "x";
+				}
+			else if (piecePlacement == 4)
+				{
+					Board.board[2][1] = "x";
+				}
+			else if (piecePlacement == 5)
+				{
+					Board.board[2][5] = "x";
+				}
+			else if (piecePlacement == 6)
+				{
+					Board.board[2][9] = "x";
+				}
+			else if (piecePlacement == 7)
+				{
+					Board.board[4][1] = "x";
+				}
+			else if (piecePlacement == 8)
+				{
+					Board.board[4][5] = "x";
+				}
+			else if (piecePlacement == 9)
+				{
+					Board.board[4][9] = "x";
+				}
+		}
+	
+		public static void replaceNumbero()
+			{
+				Scanner scanner = new Scanner(System.in);
+				int piecePlacement = scanner.nextInt();
+				if (piecePlacement == 1)
+					{
+						Board.board[0][1] = "o";
+					}
+				else if (piecePlacement == 2)
+					{
+						Board.board[0][5] = "o";
+					}
+				else if (piecePlacement == 3)
+					{
+						Board.board[0][9] = "o";
+					}
+				else if (piecePlacement == 4)
+					{
+						Board.board[2][1] = "o";
+					}
+				else if (piecePlacement == 5)
+					{
+						Board.board[2][5] = "o";
+					}
+				else if (piecePlacement == 6)
+					{
+						Board.board[2][9] = "o";
+					}
+				else if (piecePlacement == 7)
+					{
+						Board.board[4][1] = "o";
+					}
+				else if (piecePlacement == 8)
+					{
+						Board.board[4][5] = "o";
+					}
+				else if (piecePlacement == 9)
+					{
+						Board.board[4][9] = "o";
 					}
 			}
+		
+		public static void gainInput()
+		{
+			System.out.println("Where would you like to put your first piece?");
+			Scanner scanner = new Scanner(System.in);
+			int piecePlacement = scanner.nextInt();
+		}
 	}
