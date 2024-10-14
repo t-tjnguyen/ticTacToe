@@ -9,10 +9,32 @@ public class PlayGame
 				System.out.println("Let's play ticTacToe! (Sorry, you'll really be playing by yourself)");
 				
 				Board.displayBoard();
-				PlayGame.gainInput();
-				PlayGame.replaceNumberx();
-				Board.displayBoard();
-				System.out.println("Where would you like to put your second piece?");
+				
+				//PlayGame.gainInput();
+				System.out.println("Where would you like to put your first piece?");
+				
+				for (int i = 1; i < 10; i++)
+					{
+						PlayGame.replaceNumberx();
+						Board.displayBoard();
+						System.out.println("Where would you like to put your second piece?");
+						PlayGame.replaceNumbero();
+						Board.displayBoard();
+						System.out.println("Where would you like to put your second piece?");
+					}
+//				PlayGame.replaceNumberx();
+//				Board.displayBoard();
+//				System.out.println("Where would you like to put your second piece?");
+//				PlayGame.replaceNumbero();
+//				Board.displayBoard();
+//				System.out.println("Where would you like to put your third piece?");
+//				
+//				PlayGame.replaceNumberx();
+//				Board.displayBoard();
+//				System.out.println("Where would you like to put your fourth piece?");
+//				PlayGame.replaceNumbero();
+//				Board.displayBoard();
+				
 				/*int piecePlacement2 = scanner.nextInt();
 				if (piecePlacement2 == 1)
 					{
