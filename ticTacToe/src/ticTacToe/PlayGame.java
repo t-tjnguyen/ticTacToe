@@ -13,15 +13,15 @@ public class PlayGame
 				System.out.println("Where would you like to put your first piece?");
 
 				
-				for (int i = 1; i < 9; i++)
+				for (int i = 0; i < 9; i++)
 					{
-						PlayGame.replaceNumberx();
+						PlayGame.placex();
 						Board.displayBoard();
-						System.out.println("Where would you like to put your second piece?");
-						PlayGame.replaceNumbero();
+						System.out.println("o's turn!");
+						PlayGame.placeo();
 						Board.displayBoard();
-						System.out.println("Where would you like to put your third piece?");
-						PlayGame.winCondition();
+						System.out.println("x's turn!");
+						PlayGame.determineIfWin();
 					}
 
 			}
@@ -38,7 +38,7 @@ public class PlayGame
 //				PlayGame.replaceNumbero();
 //				Board.displayBoard();
 
-		public static void replaceNumberx()
+		public static void placex()
 			{
 				Scanner scanner = new Scanner(System.in);
 				int piecePlacement = scanner.nextInt();
@@ -80,7 +80,7 @@ public class PlayGame
 					}
 			}
 
-		public static void replaceNumbero()
+		public static void placeo()
 			{
 				Scanner scanner = new Scanner(System.in);
 				int piecePlacement = scanner.nextInt();
@@ -122,7 +122,7 @@ public class PlayGame
 					}
 			}
 
-		public static void winCondition()
+		public static void determineIfWin()
 			{
 				boolean win = false;
 				if ((Board.board[0][1] == "x" && Board.board[2][1] == "x" && Board.board[4][1] == "x")
