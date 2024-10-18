@@ -6,39 +6,21 @@ public class PlayGame
 	{
 		public static void main(String[] args)
 			{
-				System.out.println("Let's play ticTacToe! (Sorry, you'll really be playing by yourself)");
+				System.out.println("Let's play ticTacToe!");
 
 				Board.displayBoard();
 
 				System.out.println("Where would you like to put your first piece?");
 
-				
-				for (int i = 0; i < 9; i++)
+				for (int i = 0; i < 5; i++)
 					{
-						PlayGame.placex();
-						Board.displayBoard();
-						System.out.println("o's turn!");
-						PlayGame.placeo();
-						Board.displayBoard();
-						System.out.println("x's turn!");
-						PlayGame.determineIfWin();
+						PlayGame.makeATurnForX();
+						
+						PlayGame.makeATurnForO();
 					}
-
 			}
-//				PlayGame.replaceNumberx();
-//				Board.displayBoard();
-//				System.out.println("Where would you like to put your second piece?");
-//				PlayGame.replaceNumbero();
-//				Board.displayBoard();
-//				System.out.println("Where would you like to put your third piece?");
-//				
-//				PlayGame.replaceNumberx();
-//				Board.displayBoard();
-//				System.out.println("Where would you like to put your fourth piece?");
-//				PlayGame.replaceNumbero();
-//				Board.displayBoard();
-
-		public static void placex()
+		
+		public static void placeX()
 			{
 				Scanner scanner = new Scanner(System.in);
 				int piecePlacement = scanner.nextInt();
@@ -80,7 +62,7 @@ public class PlayGame
 					}
 			}
 
-		public static void placeo()
+		public static void placeO()
 			{
 				Scanner scanner = new Scanner(System.in);
 				int piecePlacement = scanner.nextInt();
@@ -122,31 +104,45 @@ public class PlayGame
 					}
 			}
 
+		public static void makeATurnForX()
+		{
+			System.out.println("x's turn!");
+			PlayGame.placeX();
+			Board.displayBoard();
+			PlayGame.determineIfWin();
+		}
+		
+		public static void makeATurnForO()
+		{
+			System.out.println("o's turn!");
+			PlayGame.placeO();
+			Board.displayBoard();
+			PlayGame.determineIfWin();
+			
+		}
+		
 		public static void determineIfWin()
 			{
-				boolean win = false;
-				if ((Board.board[0][1] == "x" && Board.board[2][1] == "x" && Board.board[4][1] == "x")
+				if (((Board.board[0][1] == "x" && Board.board[2][1] == "x" && Board.board[4][1] == "x")
 						|| (Board.board[0][5].equals("x") && Board.board[2][5].equals("x") && Board.board[4][5].equals("x"))
 						|| (Board.board[0][9].equals("x") && Board.board[2][9].equals("x") && Board.board[4][9].equals("x"))
 						|| (Board.board[0][1].equals("x") && Board.board[0][5].equals("x") && Board.board[0][9].equals("x"))
 						|| (Board.board[2][1].equals("x") && Board.board[2][5].equals("x") && Board.board[2][9].equals("x"))
 						|| (Board.board[4][1].equals("x") && Board.board[4][5].equals("x") && Board.board[4][9].equals("x"))
 						|| (Board.board[0][1].equals("x") && Board.board[2][5].equals("x") && Board.board[4][9].equals("x"))
-						|| (Board.board[0][9].equals("x") && Board.board[2][5].equals("x") && Board.board[4][1].equals("x")))
+						|| (Board.board[0][9].equals("x") && Board.board[2][5].equals("x") && Board.board[4][1].equals("x"))) 
+						|| (Board.board[0][1] == "o" && Board.board[2][1] == "o" && Board.board[4][1] == "o")
+						|| (Board.board[0][5].equals("o") && Board.board[2][5].equals("o") && Board.board[4][5].equals("o"))
+						|| (Board.board[0][9].equals("o") && Board.board[2][9].equals("o") && Board.board[4][9].equals("o"))
+						|| (Board.board[0][1].equals("o") && Board.board[0][5].equals("o") && Board.board[0][9].equals("o"))
+						|| (Board.board[2][1].equals("o") && Board.board[2][5].equals("o") && Board.board[2][9].equals("o"))
+						|| (Board.board[4][1].equals("o") && Board.board[4][5].equals("o") && Board.board[4][9].equals("o"))
+						|| (Board.board[0][1].equals("o") && Board.board[2][5].equals("o") && Board.board[4][9].equals("o"))
+						|| (Board.board[0][9].equals("o") && Board.board[2][5].equals("o") && Board.board[4][1].equals("o")))
 					{
 						System.out.println("You won!");
-						win = true;
+						System.exit(0);
 					}
-//				else
-//					{
-//						System.out.println("It's a tie!");
-//					}
 			}
 
-		public static void gainInput()
-			{
-				System.out.println("Where would you like to put your first piece?");
-				Scanner scanner = new Scanner(System.in);
-				int piecePlacement = scanner.nextInt();
-			}
 	}
